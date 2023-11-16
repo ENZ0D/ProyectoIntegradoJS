@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;;
+}
+
+body {
+    background-color: beige;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+    align-items: center;
+    position: fixed;
+    background-color: beige;
+    padding: 1.7rem;
+    z-index: 5;
+    top: 0;
+    border-bottom: 1px black ;
+}
+
+.menu-label {
+    display: none;
+}
+
+.abrir-menu {
+    display: none;
+}
+
+.cerrar-menu {
+    display: none;
+    z-index: 5;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+#navbar .nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#navbar .nav-list a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+#navbar .nav-list a:hover {
+    color: blue;
+}
+
+.iconCart {
+    cursor: pointer;
+    display: inline-block;
+    width: 45%;
+}
+
+.cant-items-in-cart {
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-right: 0.7rem;
+    color: darkblue;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    padding: 50px 35px;
+    background-color: rgb(214, 214, 208);
+    border-left: 1px black;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 380px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 3;
+}
+
+.cart::-webkit-scrollbar {
+    display: none;
+}
+
+.divider {
+    margin-top: 20px;
+    border: 0.6px black;
+    width: 100%;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.btn-buy {
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: lightblue;
+}
+
+.btn-buy:hover {
+    background-color: white;
+}
+
+.btn-delete {
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: lightblue;
+}
+
+.btn-delete:hover {
+    background-color: white;
+}
+
+.cart-open {
+    transform: translate(0%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+    z-index: 3;
+    background: whitesmoke;
+    box-shadow: 0 8px 32px 0 rgba(112, 113, 136, 0.596);
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.671);
+    margin-top: 1rem;
+}
+
+/* - INICIO DE LAS COSAS DEL CARRO QUE SE RENDERIZA EN EL JS - */
+/* - FIN DE LAS COSAS DEL CARRO QUE SE RENDERIZA EN EL JS - */
+ 
+/* --- */
+#Inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+}
+
+#Inicio .inicio-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#Inicio .inicio-txt h1 {
+    font-size: 50px;
+}
+
+#Inicio .inicio-txt h2 {
+    font-size: 35px;
+}
+
+.button {
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: lightblue;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+}
+/* --- */
+
+#SobreNosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    margin: 2rem auto;
+    gap: 0.5rem;
+}
+
+#SobreNosotros .sobrenosotros-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#SobreNosotros .sobrenosotros-txt h3 {
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#SobreNosotros .sobrenosotros-txt p{
+    font-size: 25px;
+    text-align: center;
+}
+
+#SobreNosotros .sobrenosotros-txt h4 {
+    font-size: 17px;
+    text-align: center;
+}
+/* --- */
+
+#Productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 1.5rem;
+}
+
+#Productos h2 {
+    font-size: 35px;
+}
+
+.models {
+    display: flex;
+    gap: 6.8rem;
+}
+
+.model {
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: lightblue;
+}
+
+/* BOTON COMPRAR EN EL APARTADO DE LA MUESTRA DE LOS PRODUCTOS*/
+.btnBUY {
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: lightblue;
+}
+
+.btnBUY:hover {
+    background-color: white;
+}
+
+.productoscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    gap: 2.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    padding: 2.5rem;
+}
+
+/* FALTAN COSAS DE LA CARDS DE LOS PRODUCTOS [REVISAR]*/
+
+#BtnVerMas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.btnVerMas {
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: lightblue;
+}
+
+.btnVerMas:hover {
+    background-color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+/* --- */
+
+#Contacto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 6.8rem auto;
+}
+
+#Contacto h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.input-info, input, textarea {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    border-radius: 30px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.85rem;
+    width: 100%;
+    height: auto;
+    max-width: 30rem;
+    resize: none;
+}
+
+.Enviar {
+    width: 5rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: lightblue;
+}
+
+.Enviar:hover {
+    background-color: white;
+}
+
+.formfiel.error input {
+    border: darkred;
+}
+
+/* --- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 25px;
+    text-align: center;
+}

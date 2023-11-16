@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title> • CELL-SHOP • </title>
+
+</head>
+
+<body>
+
+    <header>
+        
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        
+        <nav id="navbar" class="nav">   
+           <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>        
+
+            <ul class="nav-list">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
+                <li><a href="#Productos">Equipos</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+        
+        <div class="cart-conteiner">
+             <!--  ESTO CORRESPONDE AL CARRITO  -->
+             <div class="iconCart">
+                <i class="bi bi-bag-dash">
+                  <div class="cant-items-in-cart">0</div>
+                </i>
+            </div>
+            
+            <div class="cart">
+                <h2>Productos seleccionados</h2>
+      
+                <div class="cart-container"></div>
+      
+                <span class="divider"></span>
+      
+                <div class="cart-total">
+                  <p> TOTAL → </p>
+                  <span class="total"></span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar</button>
+            </div>
+            <!-- ACÁ TERMINA LO DEL CARRITO -->
+        </div>
+
+    </header>
+
+    <section id="Inicio">
+        <div class="inicio-txt">
+            <h1>Bienvenidos a CELL-SHOP</h1>
+            <h2>Tu próximo celular se encuentra acá!</h2>
+            <button class="button"> <a href="#Productos"> Ver los Equipos </a> </button>
+        </div>
+
+    </section>
+
+    <section id="SobreNosotros">
+        <div class="sobrenosotros-txt">
+            
+            <h3>Vendemos los mejores productos ANDROID del mercado</h3>
+            
+            <p> 
+                Con nuestro convenio con las grandes marcas de dispositivos moviles ANDROID, nuestro objetivo 
+                es que el cliente pueda elegir entre una variedad de celulares.
+            </p>
+
+            <p>
+                Además nuestros precios son acordes y también extendemos la garantia de cada equipo.
+            </p>
+
+            <p>
+                Ahora que sabes esto... ¿Qué esperas? Tu próximo SMARTPHONE está acá! 
+            </p>  
+            
+            <h4> ¿Dudas? Abajo encontraras un apartado para comunicarte con nosotros</h4>
+        
+        </div>
+
+    </section>
+
+
+    <section id="Productos">
+        <h2>EQUIPOS DISPONIBLES</h2>
+        <div class="models"> 
+            <button class="model btnActive" >  Todos los Productos  </button>
+            <button class="model" data-category="Samsung">  Samsung  </button>
+            <button class="model" data-category="Xiaomi">  Xiaomi  </button>
+            <button class="model" data-category="Motorola">  Motorola  </button>
+
+        </div>
+
+        <div class="productoscontainers"> 
+            <!-- Render con JS -->
+        </div>
+
+    </section>
+
+    <section id ="BtnVerMas">
+        <div>
+            <button class="btnVerMas">Ver más</button>
+        </div>
+    </section>
+
+
+    <section id="Contacto">
+        <form class="form_container" id="contacto-form" novalidate>
+            <h2>Contacto:</h2> 
+            <div class="input-info">
+                <div class="formfield">
+                    <label for="name" >Nombre y Apellido</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="formfield">
+                    <label for="email" >Mail</label>
+                    <input type="email" name="email" id="email" placeholder="Mail" required autocomplete="off">
+                    <small></small>
+                </div>
+                <div class="formfield">
+                    <label for="message" > Escribe aquí...</label>
+                    <textarea  type="text" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe aquí..." required autocomplete="off"></textarea>
+                    <small></small>
+                </div>
+                <div class="formfield">    
+                    <input type="submit" value="Enviar" class="Enviar">
+                </div>    
+            </div>    
+        </form>
+
+    </section>
+
+    
+    <footer>
+        <h3>Muchas gracias por haber confiado en nosotros!</h3>
+    </footer>
+
+    <script src="./assets/data.js" ></script>
+    <script src="./assets/main.js"></script>
+    
+</body>
+
+</html>
